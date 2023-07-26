@@ -3,47 +3,41 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+  <title>CSS Stylesheets with Relative Paths</title>
+
+  <!-- This line is money! It points your HTML to the CSS file. -->
+  <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 <body>
-
-  <!-- Site Header -->
   <header>
-    <!-- h1: The most important headline -->
     <h1>Student Bio</h1>
   </header>
 
-  <div>
+  <div class="container">
 
-    <!-- Section 1: Bio -->
-    <section>
-      <!-- h2: Tier-2 Headline (Not as important as the h1 header, but more than one allowed). -->
+    <section id="main-bio">
+
       <h2>Mamunur Rahman</h2>
 
-      <!-- Image with link -->
-      <img src="http://placehold.it/200x200" alt="Your Name">
+      <img id="bio-image" src="data:image/jpeg;base64,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" alt="Your Name">
 
-      <!-- Paragraph with embedded link -->
       <p>Welcome to my student Bio! <a href="http://www.lipsum.com/">www.lipsum.com</a></p>
     </section>
 
-    <!-- Section 2: Contact Info -->
-    <section>
-
-      <!-- h2: Tier-2 Headline -->
+    <section id="contact-info">
       <h2>Contact Info</h2>
-
-      <!-- Unordered list -->
       <ul>
         <li><strong>Email:</strong> <a href="#">mamunur@gmail.com</a></li>
         <li><strong>Github:</strong> <a href="#">GitHub.com</a></li>
         <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
       </ul>
-
     </section>
   </div>
 
 </body>
 
 </html>
+
